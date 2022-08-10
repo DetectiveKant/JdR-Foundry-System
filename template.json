@@ -1,0 +1,62 @@
+{
+"Actor": {
+  "types": ["personnage"],
+  "personnage": {
+    "biography": "",
+	"primaires": {
+		 "for": {
+			"value": 50
+			},
+		"dex": {
+            "value": 50
+			},
+		"con": {
+            "value": 50
+			},
+		"int": {
+            "value": 50
+			},
+		"sag": {
+            "value": 50
+			}
+	},
+	
+	"attributs": {
+		"vie": {
+		  "value": 10,
+		  "min": 0,
+		  "max": 10
+		},
+		"magie": {
+		  "value": 5,
+		  "min": 0,
+		  "max": 5
+		},
+		"energy": {
+		  "value": 5,
+		  "min": 0,
+		  "max": 5
+		},
+		"init": {
+            "value": 0,
+            "bonus": 0
+          },
+          "deplacement": {
+            "value": 0,
+            "bonus": 0
+          }
+	},
+    "groups": {}
+  }
+},
+"Item": {
+  "types": ["item"],
+  "item": {
+    "description": "",
+    "quantity": 1,
+    "weight": 0,
+    "attributes": {},
+    "groups": {}
+  }
+}
+}
