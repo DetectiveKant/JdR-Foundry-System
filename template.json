@@ -1,62 +1,47 @@
 {
-"Actor": {
-  "types": ["personnage"],
-  "personnage": {
-    "biography": "",
-	"primaires": {
-		 "for": {
-			"value": 50
-			},
-		"dex": {
-            "value": 50
-			},
-		"con": {
-            "value": 50
-			},
-		"int": {
-            "value": 50
-			},
-		"sag": {
-            "value": 50
-			}
+	"Actor": {
+	  "types": ["character"],
+	  "character": {
+		"biography": "",
+		"primary": {
+			"str": 0,
+			"dex": 0,
+			"con": 0,
+			"int": 0,
+			"wis": 0
+		},
+		
+		"attributes": {
+			"health": { "value": 15, "min": 0, "max": 15 },
+			"magic": {"value": 5, "min": 0,"max": 5},
+			"energy": {"value": 5,"min": 0,"max": 5},
+			"init": {"value": 0,"bonus": 0},
+			"movement": {"value": 0,"bonus": 0}
+		}
+	  }
 	},
+
+	"Item": {
+	  "types": ["weapon", "consumable"],
+	  "templates": {
+		"itemDescription": {
+			"description": "",
+			"value": ""
+		},
+	    "physicalItem": {
+			"quantity": 1,
+			"weight": 0,
+			"price": 0,
+			"attunement": 0,
+			"equipped": false,
+			"rarity": "",
+			"identified": true
+		  }
+	  },
 	
-	"attributs": {
-		"vie": {
-		  "value": 10,
-		  "min": 0,
-		  "max": 10
-		},
-		"magie": {
-		  "value": 5,
-		  "min": 0,
-		  "max": 5
-		},
-		"energy": {
-		  "value": 5,
-		  "min": 0,
-		  "max": 5
-		},
-		"init": {
-            "value": 0,
-            "bonus": 0
-          },
-          "deplacement": {
-            "value": 0,
-            "bonus": 0
-          }
-	},
-    "groups": {}
-  }
-},
-"Item": {
-  "types": ["item"],
-  "item": {
-    "description": "",
-    "quantity": 1,
-    "weight": 0,
-    "attributes": {},
-    "groups": {}
-  }
-}
+	  "weapon": {
+		"templates" : ["itemDescription", "physicalItem"],
+		"damage": "1d6"
+	  }
+	}
 }
