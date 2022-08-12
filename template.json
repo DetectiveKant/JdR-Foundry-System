@@ -4,15 +4,15 @@
 	  "character": {
 		"biography": "",
 		"primary": {
-			"str": 0,
-			"dex": 0,
-			"con": 0,
-			"int": 0,
-			"wis": 0
+			"str": { "value": 0, "bonus": 0},
+			"dex": { "value": 0, "bonus": 0},
+			"con": { "value": 0, "bonus": 0},
+			"int": { "value": 0, "bonus": 0},
+			"wis": { "value": 0, "bonus": 0}
 		},
 		
 		"attributes": {
-			"health": { "value": 15, "min": 0, "max": 15 },
+			"health": { "value": 15, "min": 0, "max": 150 },
 			"magic": {"value": 5, "min": 0,"max": 5},
 			"energy": {"value": 5,"min": 0,"max": 5},
 			"init": {"value": 0,"bonus": 0},
@@ -22,7 +22,7 @@
 	},
 
 	"Item": {
-	  "types": ["weapon", "consumable"],
+	  "types": ["consumable", "weapon"],
 	  "templates": {
 		"itemDescription": {
 			"description": "",

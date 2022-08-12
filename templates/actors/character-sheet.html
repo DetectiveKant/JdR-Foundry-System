@@ -1,0 +1,55 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
+        <section class="header details">
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+        </section>
+
+
+    </header>
+
+
+
+    <section class="primary-stats">
+    <h3>{{ localize "STAT.Primary" }}</h3>
+<!--     <input type="number" name="data.attributes.health.value" value="{{data.attributes.health.value}}" data-dtype="Number"/>
+    <span>/</span>
+    <input type="number" name="data.attributes.health.max" value="{{data.attributes.health.max}}" data-dtype="Number"/> -->
+        <table>
+            <tr>
+                <th>{{ localize "STAT.Stat" }}</th>
+                <th>{{ localize "STAT.Str" }}</th>
+                <th>{{ localize "STAT.Dex" }}</th>
+                <th>{{ localize "STAT.Con" }}</th>
+                <th>{{ localize "STAT.Int" }}</th>
+                <th>{{ localize "STAT.Wis" }}</th>
+            </tr>
+            <tr>
+                <th>{{ localize "STAT.Base" }}</th>
+                <th><input type="number" name="data.primary.str.value" value="{{data.primary.str.value}}" data-dtype="Number"/></th>
+                <th><input type="number" name="data.primary.dex.value" value="{{data.primary.dex.value}}" data-dtype="Number"/></th>
+                <th><input type="number" name="data.primary.con.value" value="{{data.primary.con.value}}" data-dtype="Number"/></th>
+                <th><input type="number" name="data.primary.int.value" value="{{data.primary.int.value}}" data-dtype="Number"/></th>
+                <th><input type="number" name="data.primary.wis.value" value="{{data.primary.wis.value}}" data-dtype="Number"/></th>
+            </tr>
+            <tr>
+                <th>{{ localize "STAT.Bonus" }}</th>
+                <th><input type="number" name="data.primary.str.bonus" value="{{data.primary.str.bonus}}" data-dtype="Number"/></th>
+                <th><input type="number" name="data.primary.dex.bonus" value="{{data.primary.dex.bonus}}" data-dtype="Number"/></th>
+                <th><input type="number" name="data.primary.con.bonus" value="{{data.primary.con.bonus}}" data-dtype="Number"/></th>
+                <th><input type="number" name="data.primary.int.bonus" value="{{data.primary.int.bonus}}" data-dtype="Number"/></th>
+                <th><input type="number" name="data.primary.wis.bonus" value="{{data.primary.wis.bonus}}" data-dtype="Number"/></th>
+            </tr>
+            <tr>
+                <th>{{ localize "STAT.Total" }}</th>
+                <th>{{numberFormat data.primary.str.total decimals=0}}</th>
+                <th>{{numberFormat data.primary.dex.total decimals=0}}</th>
+                <th>{{numberFormat data.primary.con.total decimals=0}}</th>
+                <th>{{numberFormat data.primary.int.total decimals=0}}</th>
+                <th>{{numberFormat data.primary.wis.total decimals=0}}</th>
+            </tr>
+        </table>
+    </section>
+
+</form>
+
