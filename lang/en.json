@@ -1,20 +1,36 @@
 {
-  "ACTOR.TypeCharacter": "Character",
+  "ACTOR.TypeCharacter": "Personnage",
+  "ACTOR.Inventory": "Inventaire",
+  "ACTOR.Biography": "Biographie",
 
-  "ITEM.TypeConsumable": "Consumable",
-  "ITEM.TypeWeapon": "Weapon",
+  "ITEM.TypeConsumable": "Consommable",
+  "ITEM.TypeWeapon": "Arme",
 
-  "STAT.Stat" : "Stat",
-  "STAT.Primary" : "Primary Stats",
-  "STAT.Base" : "Base Stats",
+  "STAT.Stat" : "Statistique",
+  "STAT.Primary" : "Statistiques primaires",
+  "STAT.Base" : "Statistiques de base",
   "STAT.Bonus" : "Bonus",
-  "STAT.LevelBonus" : "Level Bonus",
-  "STAT.EquipBonus" : "Equipment Bonus",
+  "STAT.LevelBonus" : "Bonus de niveau",
+  "STAT.EquipBonus" : "Bonus d'équipement",
   "STAT.Total" : "Total",
 
-  "STAT.Str" : "Strength",
-  "STAT.Dex" : "Dexterity",
+  "CLASS.Class" : "Classe",
+  "CLASS.Level" : "Niveau",
+  "CLASS.Abilities" : "Compétences",
+
+  "STAT.Str" : "Force",
+  "STAT.Dex" : "Dextérité",
   "STAT.Con" : "Constitution",
   "STAT.Int" : "Intelligence",
-  "STAT.Wis" : "Wisdom"
+  "STAT.Wis" : "Sagesse",
+
+  "RESOURCES.Health": "PV",
+  "RESOURCES.Resources": "Ressources",
+  "RESOURCES.Magic": "Magie",
+  "RESOURCES.Energy": "Énergie",
+
+  "MISC.Notes" : "Notes"
+
+  
+  
 }

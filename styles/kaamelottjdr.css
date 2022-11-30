@@ -1,0 +1,263 @@
+/* ----------------------------------------- */
+/*  Sheet Styles                             */
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/*  Flexbox                                  */
+/* ----------------------------------------- */
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .flexrow > * {
+    flex: 1;
+  }
+  .flexrow .flex1 {
+    flex: 1;
+  }
+  .flexrow .flex2 {
+    flex: 2;
+  }
+  .flexrow .flex3 {
+    flex: 3;
+  }
+  .flexrow .flex4 {
+    flex: 4;
+  }
+  .flexcol {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .flexcol > * {
+    flex: 1;
+  }
+  .flexcol .flex1 {
+    flex: 1;
+  }
+  .flexcol .flex2 {
+    flex: 2;
+  }
+  .flexcol .flex3 {
+    flex: 3;
+  }
+  .flexcol .flex4 {
+    flex: 4;
+  }
+  
+  span.sep {
+    flex: none;
+    margin: 0 1px;
+    display: inline;
+    position: relative;
+    font-weight: normal;
+  }
+  
+  /* ----------------------------------------- */
+    /*  Element Styles                           */
+    /* ----------------------------------------- */
+    /* Form Groups */
+    /* Tags */
+    /* ----------------------------------------- */
+    /*  Sheet Header                             */
+    /* ----------------------------------------- */
+  .kaamelottjdr .sheet-header img.profile {
+    flex: 0 0 160px;
+    max-width: 360px;
+    height: 260px;
+  }
+  .kaamelottjdr .sheet-header h1.charname {
+    height: 60px;
+    padding: 0;
+  }
+  .kaamelottjdr .sheet-header h1.charname input {
+    height: 40px;
+    margin: 0px 0;
+  }
+  
+  .kaamelottjdr .sheet-header .classname {
+    display:inline-block;
+    white-space: nowrap;
+  }
+
+  .kaamelottjdr .sheet-header .classname input{
+    max-width: 50%;
+  }
+
+  .kaamelottjdr .sheet-body .body-left-panel {
+    text-align: center;
+    max-width: 35%;
+    
+    border-right: 1px solid black;
+    padding-right: 5px;
+    margin-right: 5px;
+  }
+
+  .kaamelottjdr .sheet-body .res {
+    display:inline-block;
+    white-space: nowrap;
+    overflow:hidden;
+  }
+
+  .kaamelottjdr .sheet-body .res input{
+    max-width: 40px;
+  }
+  
+  .kaamelottjdr .sheet-body textarea.notes-text {
+    min-height: 400px;
+  }
+  /*
+  .sheet-header .summary {
+    height: 30px;
+    border-bottom: 2px groove #eeede0;
+    font-size: 18px;
+  }
+  .sheet-header .summary input,
+  .sheet-header .summary span {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+  }
+  .sheet-header .summary span {
+    margin-inline-start: 4px;
+    border-block-start: 1px solid transparent;
+  }
+  .sheet-header .summary select {
+    position: relative;
+    top: -4px;
+  }
+  .sheet-header .attributes {
+    flex: 0 0 100%;
+    margin: 0;
+  }
+  .dnd5e.sheet.actor .sheet-header .attributes .attribute {
+    height: 70px;
+    margin: 0;
+    border: none;
+    border-right: 2px groove #eeede0;
+    border-radius: 0;
+  }
+  .sheet-header .attributes .attribute:last-child {
+    border-right: none;
+  }
+  .sheet-header .attributes .attribute .attribute-name {
+    position: relative;
+  }
+  .sheet-header .attributes .attribute .attribute-value {
+    height: 30px;
+    line-height: 30px;
+  }
+  .sheet-header .attributes .attribute .config-button {
+    position: absolute;
+    display: none;
+  }
+  .sheet-header .attributes .attribute:hover .config-button {
+    display: block;
+  }
+  .sheet-header .attributes .attribute input.temphp {
+    width: 48%;
+  }
+  .sheet-header .attributes .attribute .property-attribution {
+    min-width: 150px;
+    top: 50px;
+    font-family: Signika, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1rem;
+  }
+  
+  */
+  /* ----------------------------------------- */
+  /*  Basic Structure                          */
+  /* ----------------------------------------- */
+  .kaamelottjdr.sheet.actor.character {
+    min-width: 720px;
+    min-height: 680px;
+    /* ----------------------------------------- */
+    /*  Sheet Header                             */
+    /* ----------------------------------------- */
+    /* ----------------------------------------- */
+    /*  Sheet Body                               */
+    /* ----------------------------------------- */
+    /* ----------------------------------------- */
+    /*  Item Controls                            */
+    /* ----------------------------------------- */
+    /* ----------------------------------------- */
+    /*  Biography                                */
+    /* ----------------------------------------- */
+  }
+  
+  .kaamelottjdr .sheet-header img.profile {
+    flex: 0 0 250px;
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  /* MAIN BODY TABS */
+/* Style the buttons that are used to open the tab content */
+.kaamelottjdr .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Style the tab content */
+.kaamelottjdr .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid rgb(0, 0, 0);
+  border-top: none;
+}
+  
+
+
+  /*
+  .sheet-header .xpbar .bar:after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-image: linear-gradient(
+      -45deg, 
+      rgba(255, 255, 255, .2) 25%, 
+      transparent 25%, 
+      transparent 50%, 
+      rgba(255, 255, 255, .2) 50%, 
+      rgba(255, 255, 255, .2) 75%, 
+      transparent 75%, 
+      transparent
+    );
+    z-index: 1;
+    background-size: 50px 50px;
+    animation: move 2s linear infinite;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+  }
+  */
+
+  /*
+  .sheet-header .attributes a.rest {
+    border: 1px solid #b5b3a4;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0 3px;
+    margin: 0 3px;
+  }
+  .sheet-header .attributes .hit-dice {
+    font-size: 24px;
+  }
+  .sheet-header .attributes .initiative .attribute-footer input {
+    width: 32px;
+  }
+  .sheet-header .summary .proficiency {
+    text-align: right;
+    padding-right: 5px;
+  }
+  */

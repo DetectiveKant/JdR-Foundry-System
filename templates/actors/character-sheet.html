@@ -1,55 +1,134 @@
 <form class="actor-sheet {{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
-        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
-        <section class="header details">
-            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'Name' }}"/></h1>
-        </section>
+    <header class="sheet-header flexrow">
+        <img  class="profile" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="128" width="128"/>
+        <section class="header details flexcol">
+			<!-- Name -->
+			<h1 class="charname">
+				<input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'Name' }}"/>
+			</h1>
+			<div class="flexrow">
+				<!-- Class and Exp -->			
+				<aside class="classexp flexrow">
+					<div class="classname" title="{{multiclassLabels}}">
+						<label>{{ localize "CLASS.Class" }} : </label>
+						<input name="data.details.class" type="text" value="{{data.???.class}}" placeholder="None" data-dtype="Text"/>
+					</div>
+					
+					<!-- Current level -->
+					<div class="charlevel" title="{{multiclassLabels}}">
+						<label>{{ localize "CLASS.Level" }} : </label>
+						<!-- <span class="levels"> {{data.???.class}} </span> -->
+						<span class="levels">1</span>
+					</div>
+				</aside>
+			</div>
+			
+			<div class="primary-stats flexcol">
+				<!--     <input type="number" name="data.attributes.health.value" value="{{data.attributes.health.value}}" data-dtype="Number"/>
+				<span>/</span>
+				<input type="number" name="data.attributes.health.max" value="{{data.attributes.health.max}}" data-dtype="Number"/> -->
+				<table>
+					<tr>
+						<th>{{ localize "STAT.Primary" }}</th>
+						<th>{{ localize "STAT.Str" }}</th>
+						<th>{{ localize "STAT.Dex" }}</th>
+						<th>{{ localize "STAT.Con" }}</th>
+						<th>{{ localize "STAT.Int" }}</th>
+						<th>{{ localize "STAT.Wis" }}</th>
+					</tr>
+					<tr>
+						<th>{{ localize "STAT.Base" }}</th>
+						<th><input type="number" name="data.primary.str.value" value="{{data.primary.str.value}}" data-dtype="Number"/></th>
+						<th><input type="number" name="data.primary.dex.value" value="{{data.primary.dex.value}}" data-dtype="Number"/></th>
+						<th><input type="number" name="data.primary.con.value" value="{{data.primary.con.value}}" data-dtype="Number"/></th>
+						<th><input type="number" name="data.primary.int.value" value="{{data.primary.int.value}}" data-dtype="Number"/></th>
+						<th><input type="number" name="data.primary.wis.value" value="{{data.primary.wis.value}}" data-dtype="Number"/></th>
+					</tr>
+					<tr>
+						<th>{{ localize "STAT.Bonus" }}</th>
+						<th><input type="number" name="data.primary.str.bonus" value="{{data.primary.str.bonus}}" data-dtype="Number"/></th>
+						<th><input type="number" name="data.primary.dex.bonus" value="{{data.primary.dex.bonus}}" data-dtype="Number"/></th>
+						<th><input type="number" name="data.primary.con.bonus" value="{{data.primary.con.bonus}}" data-dtype="Number"/></th>
+						<th><input type="number" name="data.primary.int.bonus" value="{{data.primary.int.bonus}}" data-dtype="Number"/></th>
+						<th><input type="number" name="data.primary.wis.bonus" value="{{data.primary.wis.bonus}}" data-dtype="Number"/></th>
+					</tr>
+					<tr>
+						<th>{{ localize "STAT.Total" }}</th>
+						<th>{{numberFormat data.primary.str.total decimals=0}}</th>
+						<th>{{numberFormat data.primary.dex.total decimals=0}}</th>
+						<th>{{numberFormat data.primary.con.total decimals=0}}</th>
+						<th>{{numberFormat data.primary.int.total decimals=0}}</th>
+						<th>{{numberFormat data.primary.wis.total decimals=0}}</th>
+					</tr>
+				</table>
+			</div>
+		</section>
+	</header>
 
+	<section class="sheet-body flexrow">
+		<!-- Resources -->	
+		<section class ="body-left-panel flexcol">
+			<div>
+				<table>
+					<tr>
+						<th>{{ localize "RESOURCES.Resources" }}</th>
+					</tr>
+					<tr>
+						<th>{{ localize "RESOURCES.Health" }}</th>
+						<th>
+							<div class="hp res">
+								<input name="data.details.xp.value" type="text" value="{{data.???.hp}}" placeholder="0" data-dtype="Number"/>
+								<span class="sep">/</span>
+								<input name="data.details.xp.value" type="text" value="{{data.???.hpMax}}" placeholder="0" data-dtype="Number"/>
+							</div>
+						</th>
+					</tr>
 
-    </header>
+					<tr>
+						<th>{{ localize "RESOURCES.Energy" }}</th>
+						<th>
+							<div class="energy res">
+								<input name="data.details.xp.value" type="text" value="{{data.???.energy}}" placeholder="0" data-dtype="Number"/>
+								<span class="sep">/</span>
+								<input name="data.details.xp.value" type="text" value="{{data.???.energyMax}}" placeholder="0" data-dtype="Number"/>
+							</div>
+						</th>
+					</tr>
+				</table>
+			</div>
 
+			<div class="flexcol">
+				<label>{{ localize "MISC.Notes" }}</label>
+				<textarea class="notes-text"></textarea>
+			</div>
+		</section>
 
+		<section class="main-body">
+			<!-- Tab links -->
+			<div class="tabs flexrow">
+				<button class="tablinks" onclick="openCity(event, 'London')">{{ localize "CLASS.Abilities" }}</button>
+				<button class="tablinks" onclick="openCity(event, 'Paris')">{{ localize "ACTOR.Inventory" }}</button>
+				<button class="tablinks" onclick="openCity(event, 'Tokyo')">{{ localize "ACTOR.Biography" }}</button>
+			</div>
+			
+			<!-- Tab content -->
+			<div id="London" class="tabcontent">
+				<h3>London</h3>
+				<p>London is the capital city of England.</p>
+			</div>
+			
+			<div id="Paris" class="tabcontent">
+				<h3>Paris</h3>
+				<p>Paris is the capital of France.</p>
+			</div>
+			
+			<div id="Tokyo" class="tabcontent">
+				<h3>Tokyo</h3>
+				<p>Tokyo is the capital of Japan.</p>
+			</div>
+		</section>
 
-    <section class="primary-stats">
-    <h3>{{ localize "STAT.Primary" }}</h3>
-<!--     <input type="number" name="data.attributes.health.value" value="{{data.attributes.health.value}}" data-dtype="Number"/>
-    <span>/</span>
-    <input type="number" name="data.attributes.health.max" value="{{data.attributes.health.max}}" data-dtype="Number"/> -->
-        <table>
-            <tr>
-                <th>{{ localize "STAT.Stat" }}</th>
-                <th>{{ localize "STAT.Str" }}</th>
-                <th>{{ localize "STAT.Dex" }}</th>
-                <th>{{ localize "STAT.Con" }}</th>
-                <th>{{ localize "STAT.Int" }}</th>
-                <th>{{ localize "STAT.Wis" }}</th>
-            </tr>
-            <tr>
-                <th>{{ localize "STAT.Base" }}</th>
-                <th><input type="number" name="data.primary.str.value" value="{{data.primary.str.value}}" data-dtype="Number"/></th>
-                <th><input type="number" name="data.primary.dex.value" value="{{data.primary.dex.value}}" data-dtype="Number"/></th>
-                <th><input type="number" name="data.primary.con.value" value="{{data.primary.con.value}}" data-dtype="Number"/></th>
-                <th><input type="number" name="data.primary.int.value" value="{{data.primary.int.value}}" data-dtype="Number"/></th>
-                <th><input type="number" name="data.primary.wis.value" value="{{data.primary.wis.value}}" data-dtype="Number"/></th>
-            </tr>
-            <tr>
-                <th>{{ localize "STAT.Bonus" }}</th>
-                <th><input type="number" name="data.primary.str.bonus" value="{{data.primary.str.bonus}}" data-dtype="Number"/></th>
-                <th><input type="number" name="data.primary.dex.bonus" value="{{data.primary.dex.bonus}}" data-dtype="Number"/></th>
-                <th><input type="number" name="data.primary.con.bonus" value="{{data.primary.con.bonus}}" data-dtype="Number"/></th>
-                <th><input type="number" name="data.primary.int.bonus" value="{{data.primary.int.bonus}}" data-dtype="Number"/></th>
-                <th><input type="number" name="data.primary.wis.bonus" value="{{data.primary.wis.bonus}}" data-dtype="Number"/></th>
-            </tr>
-            <tr>
-                <th>{{ localize "STAT.Total" }}</th>
-                <th>{{numberFormat data.primary.str.total decimals=0}}</th>
-                <th>{{numberFormat data.primary.dex.total decimals=0}}</th>
-                <th>{{numberFormat data.primary.con.total decimals=0}}</th>
-                <th>{{numberFormat data.primary.int.total decimals=0}}</th>
-                <th>{{numberFormat data.primary.wis.total decimals=0}}</th>
-            </tr>
-        </table>
-    </section>
+	</body>
 
 </form>
 

@@ -17,6 +17,15 @@
 			"energy": {"value": 5,"min": 0,"max": 5},
 			"init": {"value": 0,"bonus": 0},
 			"movement": {"value": 0,"bonus": 0}
+		},
+
+		"resources": {
+			"types": ["energy", "magic", "druid_growth", "priest_holy", "ranger_focus"],
+			"energy": {"value": 5, "min": 0,"max": 5},
+			"magic": {"value": 5,"min": 0,"max": 5},
+			"druid_growth": {"value": 0, "min": 0,"max": 7},
+			"priest_holy": {"value": 3,"min": 0,"max": 3},
+			"ranger_focus": {"value": 0, "min": 0,"max": 100}
 		}
 	  }
 	},

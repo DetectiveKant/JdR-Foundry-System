@@ -1,0 +1,30 @@
+{
+  "ACTOR.TypeCharacter": "Character",
+
+  "ITEM.TypeConsumable": "Consumable",
+  "ITEM.TypeWeapon": "Weapon",
+
+  "STAT.Stat" : "Stat",
+  "STAT.Primary" : "Primary Stats",
+  "STAT.Base" : "Base Stats",
+  "STAT.Bonus" : "Bonus",
+  "STAT.LevelBonus" : "Level Bonus",
+  "STAT.EquipBonus" : "Equipment Bonus",
+  "STAT.Total" : "Total",
+
+  "CLASS.Class" : "Class",
+
+  "STAT.Str" : "Strength",
+  "STAT.Dex" : "Dexterity",
+  "STAT.Con" : "Constitution",
+  "STAT.Int" : "Intelligence",
+  "STAT.Wis" : "Wisdom",
+
+  "RESOURCES.Health": "HP",
+  "RESOURCES.Resources": "Resources",
+  "RESOURCES.Magic": "Magic",
+  "RESOURCES.Energy": "Energy",
+
+  "MISC.Notes" : "Notes"
+  
+}
